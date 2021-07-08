@@ -22,7 +22,7 @@ function conditional_value_at_risk(x::Vector{Float64}, f::Vector{Float64}, α::F
     if iszero(α)
         return x_α
     else
-        tail = x .≤ x_α
+        tail = x .> x_α
         return (sum(x[tail] .* f[tail]) - (sum(f[tail]) - α) * x_α) / α
     end
 end
