@@ -80,10 +80,10 @@ function plot_distributions(x, f, α)
 
     # Stacked plots
     plt = plot(plt1, plt2,
-        layout=(2, 1), legend=:outerright, size=(720, 400))
+        layout=(2, 1), legend=:outerright, size=(720, 480))
 end
 
-function plot_VaR(x, f, α; plt=plot(size=(720, 400), legend=false, title="Value-at-Risk"))
+function plot_VaR(x, f, α; plt=plot(size=(720, 480), legend=false, title="Value-at-Risk"))
     # Cumulative distribution
     F2 = cumsum(f)
     F1 = [0; F2[1:end-1]]
@@ -113,7 +113,7 @@ function plot_VaR(x, f, α; plt=plot(size=(720, 400), legend=false, title="Value
     return plt
 end
 
-function plot_CVaR(x, f; plt=plot(size=(720, 400), legend=false, title="Conditional Value-at-Risk"))
+function plot_CVaR(x, f; plt=plot(size=(720, 480), legend=false, title="Conditional Value-at-Risk"))
     αs = sort([0:0.01:1; f])
     plot!(plt, xlabel="α")
     plot!(plt, [0, 1], repeat([minimum(x)], 2), linewidth=2, linestyle=:dash, alpha=0.5)

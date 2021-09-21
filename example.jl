@@ -21,5 +21,5 @@ plt2 = plot_VaR(x, f, α)
 @info "CVaR"
 plt3 = plot_CVaR(x, f)
 
-plt4 = plot(plt2, plt3, layout=(1, 2), legend=false, size=(720, 400))
+plt4 = plot(plt2, plt3, layout=(1, 2), legend=false, size=(720, 480))
 savefig(plt4, joinpath(dir, "conditional-value-at-risk.svg"))
