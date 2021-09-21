@@ -1,7 +1,7 @@
 # Conditional Value-at-Risk
 ![](images/distributions.svg)
 
-You can copy The Julia code from the file [`conditional-value-at-risk`](conditional-value-at-risk.jl). The example below describes the implementation and how to use it.
+You can copy The Julia code from the file [`conditional-value-at-risk`](conditional-value-at-risk.jl). The example below describes the implementation and how to use it. This repository is related to my article [*Measuring Tail-Risk Using Conditional Value at Risk*](https://jaantollander.com/post/measuring-tail-risk-using-conditional-value-at-risk/), which discusses the definition, properties and implementation of conditional value at risk in more detail.
 
 We can implement the value-at-risk and conditional value-at-risk functions in [Julia](https://julialang.org/) for discrete probability distributions as follow.
 
